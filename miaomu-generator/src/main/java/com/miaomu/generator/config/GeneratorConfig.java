@@ -40,16 +40,16 @@ public class GeneratorConfig {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://182.92.65.228:3306/ikks?useUnicode=true&characterEncoding=UTF-8");
+        dsc.setUrl("jdbc:mysql://118.190.132.87:3306/miaomu?useUnicode=true&characterEncoding=UTF-8");
         dsc.setSchemaName("public");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("123456");
+        dsc.setPassword("Li5710246");
         mpg.setDataSource(dsc);
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setParent("com.chintec.ikks");
+        pc.setParent("com.miaomu");
         mpg.setPackageInfo(pc);
         pc.setModuleName(modules);
 
