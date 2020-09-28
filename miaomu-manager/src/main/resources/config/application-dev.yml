@@ -28,7 +28,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://118.190.132.87:3306/miaomu?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=convertToNull
     username: root
-    password: root
+    password: Li5710246
     # 指定 druid 连接池以及 druid 连接池配置
     type: com.alibaba.druid.pool.DruidDataSource
     druid:

@@ -26,13 +26,13 @@ public class SwaggerConfig {
 
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(new ApiInfoBuilder()
-                        .title("标题:Message管理")
-                        .description("Message管理")
-                        .contact(new Contact("", "www.chintec.net", "@chintec.net"))
+                        .title("标题:Manager管理")
+                        .description("Manager管理")
+                        .contact(new Contact("", "www.miaomu.com", "@miaomu.net"))
                         .version("1.0.0")
                         .build())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.chintec.ikks.message"))
+                .apis(RequestHandlerSelectors.basePackage("com.miaomu.manager"))
                 .paths(PathSelectors.any())
                 .build();
 
