@@ -41,7 +41,7 @@
         <druid.version>1.1.21</druid.version>
         <xstream.version>1.4.9</xstream.version>
         <statemachine.version>2.1.1.RELEASE</statemachine.version>
-        <nacos.version>1.2.0</nacos.version>
+
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -52,12 +52,6 @@
                 <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-                <exclusions>
-                    <exclusion>
-                        <groupId>com.alibaba.nacos</groupId>
-                        <artifactId>nacos-client</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -157,11 +151,6 @@
                 <groupId>org.springframework.statemachine</groupId>
                 <artifactId>spring-statemachine-core</artifactId>
                 <version>${statemachine.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba.boot</groupId>
-                <artifactId>nacos-config-spring-boot-starter</artifactId>
-                <version>${nacos.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
