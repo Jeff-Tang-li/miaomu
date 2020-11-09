@@ -1,4 +1,4 @@
-package com.miaomu.portal.config;
+package com.miaomu.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
