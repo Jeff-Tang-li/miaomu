@@ -1,0 +1,21 @@
+server:
+  port: 8080 #端口号
+  servlet:
+    context-path: /
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: miaomu-manager #应用名
+  cloud:
+    nacos:
+      config:
+        group: DEFAULT_GROUP
+        file-extension: yaml
+        enabled: true
+        namespace: aab38ff4-2f6e-4a13-97b7-0c0ca45153eb
+        server-addr: www.xinlitang.cn:8848
+      discovery:
+        namespace: aab38ff4-2f6e-4a13-97b7-0c0ca45153eb
+        server-addr: www.xinlitang.cn:8848
+

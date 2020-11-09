@@ -1,0 +1,18 @@
+server:
+  port: 7071 #端口号
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: miaomu-auth #应用名
+  cloud:
+    nacos:
+      config:
+        file-extension: yaml
+        group: DEFAULT_GROUP
+        namespace: aab38ff4-2f6e-4a13-97b7-0c0ca45153eb
+        server-addr: 8.131.88.236:8848
+      discovery:
+        namespace: aab38ff4-2f6e-4a13-97b7-0c0ca45153eb
+        server-addr:  8.131.88.236:8848
+

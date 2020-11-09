@@ -9,11 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.miaomu.portal</groupId>
-    <artifactId>miaomu-portal</artifactId>
+    <groupId>com.miaomu.goods</groupId>
+    <artifactId>miaomu-gooods</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>miaomu-portal</name>
+    <name>miaomu-gooods</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
@@ -22,7 +22,6 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
-
     <dependencies>
         <!--nacos 配置-->
         <dependency>
