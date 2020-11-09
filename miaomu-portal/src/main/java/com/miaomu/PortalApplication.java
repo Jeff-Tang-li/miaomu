@@ -1,6 +1,6 @@
-package com.miaomu.portal;
+package com.miaomu;
 
-import com.alibaba.nacos.spring.context.annotation.config.NacosPropertySource;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2020/9/28 9:24
  */
 @SpringBootApplication
+@MapperScan("com.miaomu.mapper")
 public class PortalApplication {
     public static void main(String[] args) {
         SpringApplication.run(PortalApplication.class, args);
