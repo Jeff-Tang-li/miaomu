@@ -29,15 +29,15 @@ public class ResultResponse {
         return new ResultResponse(200, "SUCCESS", t);
     }
 
-    public static ResultResponse failure(Integer status, String message, Object t) {
+    public static ResultResponse error(Integer status, String message, Object t) {
         return new ResultResponse(status, message, t);
     }
 
-    public static ResultResponse failure(String message, Object t) {
+    public static ResultResponse error(String message, Object t) {
         return new ResultResponse(40001, message, t);
     }
 
-    public static ResultResponse failure(Object t) {
+    public static ResultResponse error(Object t) {
         return new ResultResponse(40001, "FAILURE", t);
     }
 

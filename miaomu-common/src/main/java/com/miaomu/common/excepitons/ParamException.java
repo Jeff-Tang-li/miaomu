@@ -1,5 +1,7 @@
 package com.miaomu.common.excepitons;
 
+import com.miaomu.common.enums.ResponseEnum;
+
 /**
  * @author Jeff·Tang
  * @version 1.0
@@ -7,8 +9,8 @@ package com.miaomu.common.excepitons;
  */
 
 public class ParamException extends RuntimeException {
-    private Integer code = 40001;
-    private String msg = "参数错误";
+    private Integer code = ResponseEnum.RESPONSE_ENUM_PARAM_ERROR.getCode();
+    private String msg = ResponseEnum.RESPONSE_ENUM_PARAM_ERROR.getMessage();
 
     public ParamException() {
     }

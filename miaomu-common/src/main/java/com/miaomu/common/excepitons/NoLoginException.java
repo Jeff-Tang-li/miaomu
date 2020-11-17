@@ -1,13 +1,15 @@
 package com.miaomu.common.excepitons;
 
+import com.miaomu.common.enums.ResponseEnum;
+
 /**
  * @author Jeff·Tang
  * @version 1.0
  * @date 2020/10/30 13:50
  */
 public class NoLoginException extends RuntimeException {
-    private Integer code = 50001;
-    private String msg = "UnAuthorized ";
+    private Integer code = ResponseEnum.RESPONSE_ENUM_USER_ERROR_LOGIN.getCode();
+    private String msg = ResponseEnum.RESPONSE_ENUM_USER_ERROR_LOGIN.getMessage();
 
     public NoLoginException() {
     }

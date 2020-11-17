@@ -1,4 +1,4 @@
-package com.miaomu.config;
+package com.miaomu.portal.config;
 
 import com.baomidou.mybatisplus.core.MybatisConfiguration;
 import com.baomidou.mybatisplus.core.MybatisXMLLanguageDriver;
