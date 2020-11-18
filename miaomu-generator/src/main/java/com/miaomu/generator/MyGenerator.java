@@ -10,6 +10,6 @@ import com.miaomu.generator.config.GeneratorConfig;
  */
 public class MyGenerator {
     public static void main(String[] args) {
-    GeneratorConfig.getMyGenerator("process","flow_node","jeff·Tang");
+    GeneratorConfig.getMyGenerator("User","miaomu_user","jeff·Tang");
     }
 }
