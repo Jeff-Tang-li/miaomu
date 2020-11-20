@@ -12,7 +12,8 @@ spring:
         group: DEFAULT_GROUP
         namespace: aab38ff4-2f6e-4a13-97b7-0c0ca45153eb
         server-addr: 8.131.88.236:8848
+        enabled: true
       discovery:
         namespace: aab38ff4-2f6e-4a13-97b7-0c0ca45153eb
-        server-addr:  8.131.88.236:8848
+        server-addr: 8.131.88.236:8848
 
