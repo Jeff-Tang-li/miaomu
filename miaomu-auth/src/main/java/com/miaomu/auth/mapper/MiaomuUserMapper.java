@@ -1,7 +1,7 @@
 package com.miaomu.auth.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.miaomu.auth.entity.MiaomuUser;
+import com.miaomu.common.entity.auth.MiaomuUser;
 
 /**
  * <p>

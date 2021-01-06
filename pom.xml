@@ -28,7 +28,7 @@
         <logback.version>1.2.3</logback.version>
         <slf4j.version>1.7.25</slf4j.version>
         <rabitMq.version>5.6.0</rabitMq.version>
-        <mybatis.plus.version>3.0.6</mybatis.plus.version>
+        <mybatis.plus.version>3.4.1</mybatis.plus.version>
         <projectlombok.version>1.18.8</projectlombok.version>
         <swagger.version>2.9.2</swagger.version>
         <pagehelper.version>5.1.11</pagehelper.version>
@@ -101,6 +101,11 @@
                 <version>${projectlombok.version}</version>
                 <scope>provided</scope>
             </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
             <!--swagger依赖-->
             <dependency>
                 <groupId>io.springfox</groupId>
@@ -123,12 +128,6 @@
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
-            </dependency>
-            <!--springboot-mybatis-->
-            <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>${mybatis.version}</version>
             </dependency>
             <!-- druid 连接池依赖 -->
             <dependency>

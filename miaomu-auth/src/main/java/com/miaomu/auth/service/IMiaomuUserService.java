@@ -1,7 +1,7 @@
 package com.miaomu.auth.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.miaomu.auth.entity.MiaomuUser;
+import com.miaomu.common.entity.auth.MiaomuUser;
 import com.miaomu.common.entity.vo.UserRequest;
 import org.springframework.http.ResponseEntity;
 

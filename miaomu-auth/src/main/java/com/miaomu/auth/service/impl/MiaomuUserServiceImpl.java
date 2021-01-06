@@ -1,9 +1,10 @@
 package com.miaomu.auth.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.miaomu.auth.entity.MiaomuUser;
+import com.miaomu.common.entity.auth.MiaomuUser;
 import com.miaomu.auth.mapper.MiaomuUserMapper;
 import com.miaomu.auth.service.IMiaomuUserService;
 import com.miaomu.common.entity.vo.UserRequest;
@@ -12,6 +13,7 @@ import com.miaomu.common.utils.MD5Util;
 import com.miaomu.common.utils.PhoneUtil;
 import com.miaomu.common.utils.TimeUtils;
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -48,7 +50,6 @@ public class MiaomuUserServiceImpl extends ServiceImpl<MiaomuUserMapper, MiaomuU
         one.setUserSex(StringUtils.isEmpty(userRequest.getUserSex()) ? null : (userRequest.getUserSex() == 1));
         one.setUserPassword(MD5Util.getSaltMD5(userRequest.getUserPassword()));
         one.setUserBorth(StringUtils.isEmpty(userRequest.getUserBorth()) ? null : TimeUtils.toLocalDateTime(userRequest.getUserBorth()));
-        one.setIsValued(true);
         AsserUtils.isTrue(!this.saveOrUpdate(one), "注册失败！");
         return ResponseEntity.ok("操作成功");
     }
@@ -108,7 +109,7 @@ public class MiaomuUserServiceImpl extends ServiceImpl<MiaomuUserMapper, MiaomuU
     }
 
     @Override
-    public ResponseEntity<?>user(Integer id) {
+    public ResponseEntity<?> user(Integer id) {
         return ResponseEntity.ok(this.getById(id));
     }
 

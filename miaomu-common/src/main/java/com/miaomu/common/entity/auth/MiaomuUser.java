@@ -1,4 +1,4 @@
-package com.miaomu.auth.entity;
+package com.miaomu.common.entity.auth;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author jeff·Tang
@@ -73,15 +73,12 @@ public class MiaomuUser extends Model<MiaomuUser> {
 
     /**
      * 最后一次登录时间
-
      */
-    @TableField(fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime lastLogin;
 
     /**
      * 第一次登录时间
      */
-    @TableField(fill = FieldFill.INSERT)
     private LocalDateTime firstLogin;
 
     /**
@@ -108,9 +105,12 @@ public class MiaomuUser extends Model<MiaomuUser> {
      * 具体门牌号地址
      */
     private String address;
-    @TableField(fill = FieldFill.INSERT)
+
+
+    @TableField(value = "create_time", fill = FieldFill.INSERT)
     private LocalDateTime createTime;
-    @TableField(fill = FieldFill.INSERT_UPDATE)
+
+    @TableField(value = "update_time", fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime updateTime;
 
     private Integer updateBy;
@@ -118,6 +118,7 @@ public class MiaomuUser extends Model<MiaomuUser> {
     /**
      * 0无效,1有效
      */
+    @TableField(fill = FieldFill.INSERT)
     private Boolean isValued;
 
     /**
