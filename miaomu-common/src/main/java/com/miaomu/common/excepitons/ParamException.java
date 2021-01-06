@@ -1,15 +1,18 @@
 package com.miaomu.common.excepitons;
 
 import com.miaomu.common.enums.ResponseEnum;
+import lombok.Data;
 
 /**
  * @author Jeff·Tang
  * @version 1.0
  * @date 2020/10/30 13:44
  */
-
+@Data
 public class ParamException extends RuntimeException {
+
     private Integer code = ResponseEnum.RESPONSE_ENUM_PARAM_ERROR.getCode();
+
     private String msg = ResponseEnum.RESPONSE_ENUM_PARAM_ERROR.getMessage();
 
     public ParamException() {
@@ -30,19 +33,4 @@ public class ParamException extends RuntimeException {
         this.msg = msg;
     }
 
-    public Integer getCode() {
-        return code;
-    }
-
-    public void setCode(Integer code) {
-        this.code = code;
-    }
-
-    public String getMsg() {
-        return msg;
-    }
-
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
 }

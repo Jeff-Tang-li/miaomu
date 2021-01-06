@@ -2,9 +2,9 @@ package com.miaomu.auth.service;
 
 import com.miaomu.auth.entity.MiaomuUser;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.miaomu.common.entity.response.ResultResponse;
 import com.miaomu.common.entity.vo.UserRequest;
 import com.miaomu.common.enums.ResponseEnum;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
@@ -23,7 +23,7 @@ public interface IMiaomuUserService extends IService<MiaomuUser> {
      * @param userRequest
      * @return
      */
-    ResultResponse addUser(UserRequest userRequest);
+    ResponseEntity<?> addUser(UserRequest userRequest);
 
     /**
      * 更新用户
@@ -31,7 +31,7 @@ public interface IMiaomuUserService extends IService<MiaomuUser> {
      * @param userRequest
      * @return
      */
-    ResultResponse updateUser(UserRequest userRequest);
+    ResponseEntity<?> updateUser(UserRequest userRequest);
 
     /**
      * 删除用户
@@ -39,9 +39,9 @@ public interface IMiaomuUserService extends IService<MiaomuUser> {
      * @param id
      * @return
      */
-    ResultResponse deleteUser(Integer id);
+    ResponseEntity<?> deleteUser(Integer id);
 
-    ResultResponse users(Integer currentPage, Integer pageSize, String params, Integer sort);
+    ResponseEntity<?> users(Integer currentPage, Integer pageSize, String params, Integer sort);
 
-    ResultResponse user(Integer id);
+    ResponseEntity<?> user(Integer id);
 }
