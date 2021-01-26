@@ -62,7 +62,7 @@ public class MiaomuUserController {
     @GetMapping("user/{id}")
     @ApiOperation("详情")
     public ResponseEntity<?> user(@PathVariable Integer id) {
-        return miaomuUserService.user(id);
+        return ResponseEntity.ok( miaomuUserService.user(id));
     }
 
 }

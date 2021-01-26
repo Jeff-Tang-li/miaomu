@@ -1,6 +1,7 @@
 package com.miaomu.auth.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.miaomu.common.entity.ResultInfo;
 import com.miaomu.common.entity.auth.MiaomuUser;
 import com.miaomu.common.entity.vo.UserRequest;
 import org.springframework.http.ResponseEntity;
@@ -40,5 +41,5 @@ public interface IMiaomuUserService extends IService<MiaomuUser> {
 
     ResponseEntity<?> users(Integer currentPage, Integer pageSize, String params, Integer sort);
 
-    ResponseEntity<?> user(Integer id);
+    ResultInfo<?> user(Integer id) throws InterruptedException;
 }

@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.miaomu.common.entity.ResultInfo;
 import com.miaomu.common.entity.auth.MiaomuUser;
 import com.miaomu.auth.mapper.MiaomuUserMapper;
 import com.miaomu.auth.service.IMiaomuUserService;
@@ -12,14 +13,20 @@ import com.miaomu.common.utils.AsserUtils;
 import com.miaomu.common.utils.MD5Util;
 import com.miaomu.common.utils.PhoneUtil;
 import com.miaomu.common.utils.TimeUtils;
+import lombok.extern.slf4j.Slf4j;
+import org.redisson.api.RLock;
+import org.redisson.api.RedissonClient;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
+import java.util.concurrent.TimeUnit;
 
 /**
  * <p>
@@ -30,7 +37,10 @@ import java.time.ZoneOffset;
  * @since 2020-11-19
  */
 @Service
+@Slf4j
 public class MiaomuUserServiceImpl extends ServiceImpl<MiaomuUserMapper, MiaomuUser> implements IMiaomuUserService {
+    @Autowired
+    private RedissonClient redissonClient;
 
     /**
      * 用户添加
@@ -109,8 +119,9 @@ public class MiaomuUserServiceImpl extends ServiceImpl<MiaomuUserMapper, MiaomuU
     }
 
     @Override
-    public ResponseEntity<?> user(Integer id) {
-        return ResponseEntity.ok(this.getById(id));
+    public ResultInfo<?> user(Integer id) {
+        MiaomuUser byId = this.getById(id);
+        return ResultInfo.success(byId);
     }
 
 

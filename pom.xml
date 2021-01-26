@@ -41,7 +41,7 @@
         <druid.version>1.1.21</druid.version>
         <xstream.version>1.4.9</xstream.version>
         <statemachine.version>2.1.1.RELEASE</statemachine.version>
-
+        <redisson.version>3.13.4</redisson.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -156,6 +156,12 @@
                 <groupId>org.springframework.statemachine</groupId>
                 <artifactId>spring-statemachine-core</artifactId>
                 <version>${statemachine.version}</version>
+            </dependency>
+            <!-- redisson -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
